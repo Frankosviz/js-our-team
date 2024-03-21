@@ -72,9 +72,9 @@ let workers = [
     {
         nome : 'Barbara Ramos',
         role : 'Graphic Designer',
-        image : 'barbara-ramos-graphic-designer.jpg'
+        image : 'Barbara-ramos-graphic-designer.jpg'
     }
-]
+];
 
 console.log(workers);
 
@@ -83,7 +83,9 @@ const ulEl = document.querySelector('ul');
 for(let i = 0; i < workers.length; i++){
     const liEl = document.createElement('li');
     liEl.innerHTML = `
-    Nome: ${workers[i].nome} Role: ${workers[i].role} ${workers[i].image}
+    Nome: ${workers[i].nome} Role: ${workers[i].role} <img src="img/${workers[i].image}">
     `;
     ulEl.appendChild(liEl);
 }
+
+
