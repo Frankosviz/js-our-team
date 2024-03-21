@@ -77,7 +77,7 @@ console.log(workers);
     const wrapper = document.getElementById('wrapper');
     wrapper.classList.add('flex');
     console.log(wrapper);
-
+    let clicked = false;
 
 for(let i = 0; i < workers.length; i++){
     
@@ -88,3 +88,26 @@ for(let i = 0; i < workers.length; i++){
     `;
     wrapper.appendChild(divEl);
 }
+
+
+    const button = document.getElementById('button');
+
+    button.addEventListener('click', function(){
+        let newNameSurname = document.getElementById('newNameSurname').value; 
+        let newRole = document.getElementById('newRole').value;
+        const newWorker = {
+            nome : newNameSurname,
+            role : newRole
+        }
+        workers.push(newWorker);
+
+        const newDivEl = document.createElement('div');
+        newDivEl.classList.add('card');
+        newDivEl.innerHTML = `
+        <img src="img/${workers[0].image}"> <h3>${newWorker.nome}</h3> <h4 class="clr-green">${newWorker.role}</h4>
+        `;
+        wrapper.appendChild(newDivEl);
+    
+    })
+
+
