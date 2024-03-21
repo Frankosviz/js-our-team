@@ -27,12 +27,7 @@
 // E ricordiamoci che console.log() è nostro amico!
 
 // Mio template html
-/* <nav class="navbar navbar-expand-sm navbar-light bg-primary" id="navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Chi siamo</a>
-                <a class="navbar-brand" aria-current="page" href="#">Contact us</a>
-            </div>
-        </nav>
+/* 
         <main>
             <div id="wrapper" class="bg-primary">
                 <div class="card">Ciao io sono giovanni</div>
@@ -43,6 +38,7 @@
                 <div class="card">Ciao io sono francesco</div>
             </div>
         </main> */
+
 let workers = [
     {
         nome : 'Wayne Barnett',
@@ -77,15 +73,23 @@ let workers = [
 ];
 
 console.log(workers);
+const wrapper = document.getElementById('wrapper');
 
-const ulEl = document.querySelector('ul');
+const cardEl = document.getElementById('card');
 
 for(let i = 0; i < workers.length; i++){
-    const liEl = document.createElement('li');
-    liEl.innerHTML = `
-    Nome: ${workers[i].nome} Role: ${workers[i].role} <img src="img/${workers[i].image}">
+    wrapper.classList.add('bg-primary', 'd-flex', 'flex-wrap');
+    const divEl = document.createElement('div');
+    divEl.classList.add = ('card');
+    cardEl.innerHTML = `
+    <img src="img/${workers[0].image}"> <h3>${workers[0].nome}</h3> <h4 class="clr-green">${workers[0].role}</h4>
+    <img src="img/${workers[1].image}"> <h3>${workers[1].nome}</h3> <h4 class="clr-green">${workers[1].role}</h4>
+    <img src="img/${workers[2].image}"> <h3>${workers[2].nome}</h3> <h4 class="clr-green">${workers[2].role}</h4>
+    <img src="img/${workers[3].image}"> <h3>${workers[3].nome}</h3> <h4 class="clr-green">${workers[3].role}</h4>
+    <img src="img/${workers[4].image}"> <h3>${workers[4].nome}</h3> <h4 class="clr-green">${workers[4].role}</h4>
+    <img src="img/${workers[5].image}"> <h3>${workers[5].nome}</h3> <h4 class="clr-green">${workers[5].role}</h4>
     `;
-    ulEl.appendChild(liEl);
+    cardEl.appendChild(divEl);
 }
 
 
