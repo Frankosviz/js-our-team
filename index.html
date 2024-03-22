@@ -12,29 +12,37 @@
     <title>js-our-team</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-primary" id="navbar">
+<body class="bg-black " >
+    <nav class="navbar navbar-expand-sm navbar-light bg-black border-bottom" id="navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">About us</a>
-            <a class="navbar-brand" aria-current="page" href="#">Contact us</a>
+            <a class="navbar-brand text-white" href="#">About us</a>
+            <a class="navbar-brand text-white" aria-current="page" href="#">Contact us</a>
         </div>
     </nav>
+    <div class="d-flex justify-content-center align-content-center flex-column text-center mt-4">
+        <h1 class="text-uppercase text-success">our team</h1>
+        <p class="text-white wrapper-form"><strong class="text-uppercase">Come and join to our Team!!!</strong> <br> <em>If you think
+                you have the skills to be part of our project, fill out the form down here with your information!</em>
+        </p>
+    </div>
 
     <main>
         <div id="wrapper">
 
         </div>
-
-        <div class="row g-3">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Name and Surname" aria-label="NameSurname" id="newNameSurname">
+        <div class="wrapper-form">
+            <div class="row g-3">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Name and Surname" aria-label="NameSurname"
+                        id="newNameSurname">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Role" aria-label="Role" id="newRole">
+                </div>
             </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Role" aria-label="Role" id="newRole">
+            <div class="d-flex justify-content-center align-content-center mt-3">
+                <button class="btn btn-success" id="button">Add New Member</button>
             </div>
-        </div>
-        <div class="d-flex justify-content-center align-content-center mt-3">
-            <button class="btn btn-success" id="button">Add New Member</button>
         </div>
 
     </main>
